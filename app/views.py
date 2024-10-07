@@ -21,6 +21,7 @@ def insertdata(request):
 def updatedata(request,id):
     x=Student.objects.get(id=id)
     context={"x":x}
+    
     if request.method=="POST":
         name=request.POST.get('name')
         number=request.POST.get('number')
